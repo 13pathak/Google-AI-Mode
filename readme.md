@@ -1,4 +1,4 @@
-# **Google AI Focused Window**
+# **Google AI Focused Window (Deprecating)**
 
 A lightweight browser extension that provides a fast and focused way to access Google's AI Search Mode using a keyboard shortcut. Instead of opening a distracting new tab, this extension launches your query in a clean, dedicated popup window that automatically closes when you're done.
 
