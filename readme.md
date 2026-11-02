@@ -1,25 +1,25 @@
 # **Google AI Focused Window (Deprecating)**
 
-A lightweight browser extension that provides a fast and focused way to access Google's AI Search Mode using a keyboard shortcut. Instead of opening a distracting new tab, this extension launches your query in a clean, dedicated popup window that automatically closes when you're done.
+A browser extension that opens Google's AI Search Mode in a dedicated popup window using a keyboard shortcut. The window closes when you switch to another browser window.
 
 ## **Features**
 
-* **🚀 Keyboard Shortcut:** Press Ctrl+Shift+K (or Cmd+Shift+K on Mac) to instantly open the search prompt from any page. You can change shorcut keys in extension shortcuts in settings.
+* **🚀 Keyboard Shortcut:** Press Ctrl+Shift+K (or Cmd+Shift+K on Mac) to open the search prompt. Change the shortcut at `chrome://extensions/shortcuts`.
 * **✨ Focused Window:** Your search query opens in a clean, separate popup window, free from the clutter of a normal browser tab.  
-* **🧠 Auto-Close:** The focused window smartly closes itself as soon as you click away, keeping your workspace tidy.  
-* **🎨 Clean Layout:** Custom CSS is injected into the Google Search page to hide unnecessary elements and fix layout issues, ensuring the content fits perfectly within the window.
+* **🧠 Auto-Close:** The focused window closes when another browser window gains focus.  
+* **🎨 Clean Layout:** Custom CSS adjusts the Google Search page for the smaller window.
 
 ## **Installation**
 
 Since this is not on the Chrome Web Store, you can load it directly into your browser:
 
 1. **Download:** Download this project's files, preferably as a ZIP, and unzip them to a folder on your computer.  
-2. **Open Browser:** Open your Chromium-based browser (like Google Chrome, Brave, or Edge).  
-3. **Navigate to Extensions:** Type chrome://extensions in the address bar and press Enter.  
+2. **Prepare the Icons:** Rename the included `icons` folder to `images` in your downloaded copy. The current `manifest.json` references `images/icon16.png`, `images/icon48.png`, and `images/icon128.png`.  
+3. **Open Extensions:** Open your Chromium-based browser and visit its extensions page (`chrome://extensions` in Chrome or `edge://extensions` in Edge).  
 4. **Enable Developer Mode:** In the top-right corner of the extensions page, toggle on "Developer mode".  
 5. **Load the Extension:** Click the "Load unpacked" button that appears.  
 6. **Select Folder:** In the file dialog, navigate to and select the folder where you unzipped the project files.  
-7. **Done\!** The "Google AI Focused Window" extension should now appear in your list of extensions and be ready to use.
+7. **Done!** The "Google AI Focused Window" extension should now appear in your list of extensions and be ready to use.
 
 ## **How to Use**
 
@@ -31,11 +31,11 @@ Since this is not on the Chrome Web Store, you can load it directly into your br
 ## **File Structure**
 
 * manifest.json: The core file that defines the extension's permissions, features, and file references.  
-* background.js: The service worker that acts as the extension's "brain." It manages the creation, updating, and auto-closing of the focused window.  
+* background.js: The service worker that creates, updates, and closes the focused window.  
 * popup.html / popup.css / popup.js: These files create the small initial search box that appears when you use the keyboard shortcut.  
-* injector.css: A crucial CSS file that is programmatically injected into the Google Search page to override its styles and ensure the content is readable within the smaller window.  
-* images/: Contains the icons for the extension.
+* injector.css: Styles injected into the Google Search page to adjust the smaller window's layout.  
+* icons/: Contains the extension icons. Rename this folder to `images` before loading the current manifest, as described above.
 
 ## **Contributing**
 
-This was a personal project, but feel free to fork this repository, suggest improvements, or open an issue if you find any bugs\!
+This was a personal project, but feel free to fork this repository, suggest improvements, or open an issue if you find any bugs!
